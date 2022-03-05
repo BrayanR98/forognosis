@@ -41,4 +41,5 @@ var indice =0
            setInterval(aumentarindice,2000)
         //  pintarcards()
             
+        
 
