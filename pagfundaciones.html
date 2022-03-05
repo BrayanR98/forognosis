@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+     <div class="row" id="cards"> </div>
+
+    <div class="col-md-2"><!--boton registrar fundacion-->
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">REGISTRAR FUNDACION </button>
+    </div>  
+    <section><!--Formulario registro fUNDACION-->
+      <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasBottomLabel">Registrar foro</h5>
+          
+        </div>
+        <div class="offcanvas-body small">
+          <label for="">Imagen de fundacion</label>
+          <input type="file" placeholder="" id="img-foro" onchange=" return validarExt() ">
+          <label for="">Nombre de fundacion</label>
+          <input type="text" placeholder=" " id="titulo-foro-r">
+          <label for="">Video presentacion de fundacion (opcional)</label>
+         <section>
+          <input type="file" placeholder="" id="Archivoinput-foro">
+          <div id="visor-archivo"> </div>
+         </section>
+          <label for="">breve descripcion</label>
+          <input type="text" placeholder="Descripcion.." id="descrip-foro-r">
+          <label for="">Cuenta de fundacion</label>
+          <input type="number" placeholder="cuenta-fundacion" id="cuenta-fundacion">
+        </div>
+      </div>
+    </section>
+    </div>
+    <template id="template-card"> <!-- CARDS DE FUNDACIONES -->
+        <div class="col-12 mb-2 col-md-4">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="" id="imagen-fundacion" class="img-fluid rounded-start" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title" id="titulo-fundacion">Card title</h5>
+                      <p class="card-text" id="descripcion-fundacion" >This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                      <a href="#" class="btn btn-primary" id="boton">DONAR</a> 
+                      <button class="btn btn-info btn-sm " data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+                        Editar
+                    </button>
+                    <button class="btn btn-danger btn-sm ">
+                        Eliminar
+                    </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </template>
+
+
+    <script src="jpiyoutube.js"></script>
+</body>
+</html>

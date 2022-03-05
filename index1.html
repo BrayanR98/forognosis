@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="stilos.css">
+    <title>tiendita DC</title>
+</head>
+<body>
+    <header > <!--navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark animate__animated animate__backInLeft">
+        <div class="container-fluid">
+          <img id="redes" src="img/LOGO.ico" alt="LOGO">
+          <a class="navbar-brand" href="#" id="nav"> GNOSIS</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">QUIENES SOMOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Registrate</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  CONTENIDO
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">VIDEOS</a></li>
+                  <li><a class="dropdown-item" href="#">FOROS</a></li>
+                  <li><a class="dropdown-item" href="#">LIBROS</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">DONAR</a></li>
+                </ul>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link disabled">Disabled</a>
+              </li> -->
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+   </header>
+   
+   <main>
+       <img  src="img/foto1.jpg" alt="batman" class="img-fluid w-100">
+   </main>
+    <section> <!--significado btn REGISTRO -->
+       <div class="container">
+           <div class="row">
+                <div class="col-8 align-self-center">
+                    <h4>¿Qué significa la palabra gnosis? </h4>
+                    <P>
+                      Gnosis significa conocimiento, sabiduría. La Gnosis es el conocimiento de una sabiduría trascendental y transformativa que enseña a la humanidad a ver, oír y palpar todas las cosas que hasta el momento se señalaban como grandes misterios y enigmas.
+                      
+                    </P>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                        Registrate
+                    </button>
+
+                </div>
+                <div class="col-4">
+                    <img src="img/foto2.jpg" alt="FOTO2" class="img-fluid w-100" id="fotocambio">
+
+                </div>    
+           </div>
+        </div>
+     </section>
+     <section> <!--FORMULARIO REGISTRO E INICIO DE SESION  -->
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <button type="button" class="btn-close text-reset " data-bs-dismiss="offcanvas" aria-label="Close"></button> 
+          <div class="offcanvas-body"><!-- Formulario de registro-->
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">REGISTRESE</h5>            
+            </div>
+           
+            <form id="Registro-user" action=""> <!-- Formulario Registro -->
+              <div>
+                Registrate y participa en los foros de discucion de diferentes temas, comparte conocimiento y experiencias.
+              </div>
+              <br>
+              <div class="col-md-4">
+
+                <label for="">Imagen</label>
+                <input type="file" placeholder="" id="img-usuario" onchange=" return validarExt() ">    
+                <label for="">Nombre</label>
+                <input type="text" placeholder="Nombre" id="nombre">
+                <label for="">Apellidos</label>
+                <input type="text" placeholder="Apellidos " id="apellidos">
+                <label for="">Usuario</label>
+                <input type="text" placeholder="Usuario" id="usuario">
+                <label for="">correo</label>
+                <input type="email" placeholder="correo" id="email">
+                <label for="">Contraseña</label>
+                <input type="password" placeholder="Contraseña" id="contrasena">
+                
+  
+              </div>
+              <div class="dropdown mt-3"> 
+                <button class="btn btn-secondary btn-toggle" type="submit" id="registrar" >
+                  Dropdown button
+                </button>
+              </div>
+             </form>
+
+            <form action="" class="col-md-3"> <!--Formulario login--> 
+              <input type="email" placeholder="Correo electronico" id="email-login" class=" my-3">
+              <input type="password" placeholder="Contraseña" id="contrasena-login" class="  ">
+              <div class="dropdown mt-3 ">
+                <button class="btn btn-secondary btn-toggle" type="submit" id="ingresar">
+                  INGRESAR
+                </button>
+              </div>
+
+            </form>
+          </div>
+       </div>
+
+
+      </div>
+    </section>
+     <section class="fondomovil ">
+
+     </section>
+     <section> <!--CARDS CONTENIDO SITIO  -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3"> <!--CARD VIDEOS  -->
+           <article>
+            <div class="card" style="width: 18rem;">
+               <iframe id="videoi" src="https://www.youtube.com/embed/fpyR8UEipUA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+              
+               <div class="card-body">
+                <h5 class="card-title" id="titulov"></h5>
+                <p class="card-text" id="descripv"></p>
+                <a href="#" class="btn btn-primary" id="boton">Go somewhere</a>
+              </div>
+            </div>
+           </article> 
+          </div>
+          <div class="col-md-3"> <!--CARD FOROS -->
+            <div class="card" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text" >Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3"> <!--CARD LIBROS  -->
+            <div class="card" style="width:18rem;">
+                <a id="pdfi" href="" target="_blank">
+                <img  class="card-img-top" src=""  alt="IMAGEN LIBROS" id="imglib" loading="lazy" srcset="" style="width: 18rem; height: 10rem;" >
+              </a>  
+                <div class="card-body">
+                <h5 class="card-title" id="nomlib" ></h5>
+                <p class="card-text" id="descriplib"></p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3"> <!--CARD FUNDACIONES -->
+            <div class="card" style="width: 18rem;">
+              <img src="..."  alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+     </section>
+     <section><!--vista quienes somos -->
+         <div class="container mt-5 mb-5">
+             <div class="row">
+                 <div class="col-12">
+                     <h3>¿ QUIENES SOMOS ?</h3>
+                     <p>
+                       La pagina tiene como objetivo exponer diferentes tema enseñados en la gnosis con el fin de que aquella persona que busca la razon de su existencia puede realizar las practicas que se enseñan para que se descubra a si mismo, despierte conciencia y se libere a apartir de éstas.
+                       <br><br>
+                       Además buscamos realizar foros de discucion sobre temas particulares con el fin de conocer diferentes puntos de vista para compartir experiencias y conocimiento.
+                     </p>
+                 </div>
+             </div>
+         </div>
+     </section>
+     <section>
+       <button type="button" class="btn btn-primary" id="botonsabado" > haga clic</button>
+     </section>
+    
+    
+    
+      <footer class=" animate__animated animate__fadeInTopLeft ">
+        <div class="row">
+          <div class="col-md-3">
+
+            <img src="" alt="fotousuario">
+          </div>
+          <div class="col-md-4">
+              <ul>
+                <h2>DATOS PERSONALES</h2>
+                <li> NOMBRE: BRAYAN RESTREPO ISAZA  </li>
+                <li>EDAD: 23 AÑOS</li>
+                <li>DIRECCION:CALL 112 49 B 46</li>
+                <li>TELEFONO:3145055520</li>
+                <li>CORREO: brestrepoisaza@gmail.com</li>
+                
+              </ul>
+          </div>
+          <div class="col-md-5">
+            <ul>
+              <h2> REDES SOCIALES </h2>
+              <li> <img id="redes" src="img/favicon.ico" alt="FACEBOOK"> <a href="https://www.facebook.com/brayan.restrepo.90281943">FACEBOOK  </a> </li>
+              <li> <img id="redes" src="img/youtube.ico"  alt=" YOUTUBE"><a href="https://www.youtube.com/channel/UCnXJ3Uv3_THMLtZdR2tSSTQ">YOUTUBE</a></li>
+              <li> <img id="redes" src="img/instagram.ico" alt="INSTAGRAM"> <a href="https://www.instagram.com/invites/contact/?i=1mge244y8lgx&utm_content=dlys6n4">INSTAGRAM</a></li>
+              <li> <img id="redes" src="img/linkedin.ico" alt="LINKEDIN"> <a href="https://www.linkedin.com/in/brayan-restrepo-isaza-a7a85a232/">LINKEDIN </a></li>
+              
+            </ul>
+        </div>
+        </div>
+
+
+      </footer>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+     <script src="js/controlador.js"></script>
+     <!-- <script src="js/apiyoutube.js"></script> -->
+     <script src="js/libros.js"></script>
+     <!-- <script src="js/llenadoTienda.js"></script> -->
+    </body>
+</html>

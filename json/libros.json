@@ -1,0 +1,63 @@
+{
+    "libros":[
+       {  "nombre":"Sicología Revolucionaria",
+     "pdf":"https://drive.google.com/file/d/1czovYzJht6F47T9C5Q1u7ULTYbdMSWNM/view?usp=sharing",
+     "imagen":"https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_65.jpg?time=1644679434",
+     "srcset": "https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_65.jpg , https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_65-183x300.jpg "
+    },
+       {  "nombre":"Para los Pocos",
+        "pdf":"https://drive.google.com/file/d/1q5lALhqKQNuJAca-MhPgGegQ8jiVvul8/view?usp=sharing",
+        "imagen":"https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_68.jpg?time=1644679434",
+        "srcset": "https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_68.jpg , https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_68-183x300.jpg  "
+       },
+       {  "nombre":"Mensaje Navidad 1964-1965",
+        "pdf":"https://drive.google.com/file/d/1GVTVXqXXz49hCAnu5T6-8SyJBVJKGI50/view?usp=sharing",
+        "imagen":"https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_49.jpg?time=1644679434",
+        "srcset": "https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_49.jpg , https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_49-183x300.jpg "
+       },
+       {  "nombre":"Voluntad Cristo",
+        "pdf":"https://drive.google.com/file/d/1raMmm-wLsPRjImwq2yi7Zf5mmv6Od_1p/view?usp=sharing",
+        "imagen":"https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_50.jpg?time=1644679434",
+        "srcset": "https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_50.jpg , https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_50-183x300.jpg "
+       },
+       {  "nombre":"Tarot Y Kábala",
+        "pdf":"https://drive.google.com/file/d/1xnwig9XjFYJjPyGpyMbg4k3RYk7Osej-/view?usp=sharing",
+        "imagen":"https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_51.jpg?time=1644679434",
+        "srcset": "https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_51.jpg , https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_51-183x300.jpg "
+       },
+       {  "nombre":"La Transformación Social de la Humanidad",
+        "pdf":"https://drive.google.com/file/d/1oZBRF7X0MZPGAZWe7nSidtPohB0XfAfx/view?usp=sharing",
+        "imagen":"https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_52.jpg?time=1644679434",
+        "srcset": "https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_52.jpg , https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_52-183x300.jpg "
+       },
+       {  "nombre":"Tratado de Medicina Oculta y Mágia Práctica",
+        "pdf":"https://drive.google.com/file/d/1gQVKyzeFQFtLBikKagXYusyM5tnRd6Yj/view?usp=sharing",
+        "imagen":"https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_53.jpg?time=1644679434",
+        "srcset": "https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_53.jpg , https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_53-183x300.jpg "
+       },
+       {  "nombre":"Tratado Esotérico de Teúrgia",
+        "pdf":"https://drive.google.com/file/d/19nuGIth4rEbrUwYxIydL55lOoAQSFmAW/view?usp=sharing",
+        "imagen":"https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_55.jpg?time=1644679434",
+        "srcset": "https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_55.jpg , https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_55-183x300.jpg "
+       },
+       {  "nombre":"Tratado Esotérico de Astrología Hermética",
+        "pdf":"https://drive.google.com/file/d/1qbPmKraA4GEyY-tLmE0pItCdN6dI-BRz/view?usp=sharing",
+        "imagen":"https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_56.jpg?time=1644679434",
+        "srcset": "https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_56.jpg , https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_56-183x300.jpg "
+       },
+       {  "nombre":"Gran Manifiesto del Supremo Concejo de la Paz",
+        "pdf":"https://drive.google.com/file/d/1ahtzDk9ss3nyJO-VTapVMpPWVxf9OYL3/view?usp=sharing",
+        "imagen":"https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_57.jpg?time=1644679434",
+        "srcset": "https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_57.jpg , https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_57-183x300.jpg "
+       },
+       {  "nombre":"Introducción a la Gnósis",
+        "pdf":"https://drive.google.com/file/d/11MdTb6iYPVKLMh1HDHspwNK-W1wNk0oj/view?usp=sharing",
+        "imagen":"https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_29.jpg?time=1644679434",
+        "srcset": "https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_29.jpg , https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_29-183x300.jpg "
+       },
+       {  "nombre":"Los Misterios Mayores",
+        "pdf":"https://drive.google.com/file/d/1KYJV3-8_jjhShJ0Mm0jC31Si62nkGvhY/view?usp=sharing",
+        "imagen":"https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_30.jpg?time=1644679434",
+        "srcset": "https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_30.jpg , https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_30-183x300.jpg "
+       }    
+]}
