@@ -2,13 +2,13 @@
     background-image: url("img/FOTO3.jpg");
     background-attachment: fixed;
     background-size: cover;
-    height: 450px;
+    /* height: 450px; */
 }
 #redes{
     padding-left: 1%;
     padding-right: 1%;
 }
- li a{
+ li {
     text-decoration: none;
     
 }
@@ -16,3 +16,4 @@
 footer{
     background-color: darkgray;
 }
+

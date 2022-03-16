@@ -1,12 +1,12 @@
 // crear un arreglo de objetos 
-let productos=[
-    {
-        nombre:"pentagrama",
-        precio:450000,
-        foto:"",
-        descripcion:""
-    },
-]
+// let productos=[
+//     {
+//         nombre:"pentagrama",
+//         precio:450000,
+//         foto:"",
+//         descripcion:""
+//     },
+// ]
 
 // document.addEventListener('DOMContentLoaded', () =>{
 //     fetchData()
@@ -39,7 +39,7 @@ var indice = 0
              
            //   document.getElementById('nomlib').textContent=data.libros[indice].nombre
             // document.getElementById('descriplib').textContent=data[indice].descrip
-           
+    export function pintarTienda (){       
           
            let libros=[
                 {  nombre:"Sicología Revolucionaria",
@@ -80,6 +80,7 @@ var indice = 0
                        }
 
              ]
+             //SE USA TRAVERSING PARA CREAR ETIQUETAS HTML DESDE JS 
              // creo la referencia al componente padre
              // creo una variable para almacenar la base
              //sobre las cual voy a pintar 
@@ -110,14 +111,25 @@ var indice = 0
                 titulo.classList.add("card-title")
                 titulo.textContent= producto.nombre
 
-                let precio = document.createElement("p")
+                let precio = document.createElement("h4")
                 precio.classList.add("card-text")
                 precio.textContent= "$500000"
 
                 let descripcard = document.createElement("p")
                 descripcard.classList.add("card-text")
                 descripcard.textContent = producto.descripcion
-                
+               // Creando un boton 
+               let boton = document.createElement("button")
+               boton.classList.add("btn","btn-warning","mx-4","mb-4")
+               boton.textContent="Ver producto"
+
+               // boton.setAttribute("data-bs-toggle","modal")
+               // boton.setAttribute("data-bs-target","#exampleModal")
+
+               boton.setAttribute("type","button")
+
+
+
 
                 
 
@@ -130,27 +142,18 @@ var indice = 0
                    cuerpotarjeta.appendChild(titulo)
                    cuerpotarjeta.appendChild(precio)
                    cuerpotarjeta.appendChild(descripcard)
-                //   let 2= document.createElement("div")
-                //   tarjeta2.classlist.add("card")
-                //   tarjeta2.classlist.add("h-100")
-                //  // creo la imagen 
-                //  let foto = document.createElement("img")
-                //     foto.classList.add("card-img-top")
-                //     foto.src= producto.imagen
-                //  //2. ordenar la estructura padres e hijo 
-                //  tarjeta.appenchild(foto)
-                //  columna.appendChild(tarjeta)
-                //  cards.appendChild(columna)
+                   cuerpotarjeta.appendChild(boton)
+               
 
              
 
 
 
              });      
-            
+            }       
        
                
-           
+
     
      
    //recorriendo un arreglo con js 

@@ -9,15 +9,49 @@
 </head>
 <body>
     <header>
-
+        
     </header>
     <main>
         <div class="container">
-            <div id="titulo"></div>
-            <div class="row row-cols-1 row-cols-md-5 g-3" id="cards"> </div>
-             <div class="card-header" id="descripcion"></div>
+            
+            <div class="row row-cols-1 row-cols-md-5 g-3" id="cards"> 
+                <div class="modal fade"> </div>
+
+            </div>
+             
         </div>
     </main>
+    <section> //modal
+        <div class="modal fade" id="modalinfoproducto" tabindex="-1"   >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Tienda libros</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="container">
+                      <div class="row">
+                          <div  class="col-4">
+                            <img class="img-fluid w-100" src="" alt="" id="fotoinfo">
+                          </div>
+                          <div class="col-8">
+                            <h3 class="text-center" id="nombreinfo"></h3>
+                            <h4 class="text-center" id="precioinfo"></h4>
+                            <p  class="text-center" id="descripinfo"></p>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-warning">Añadir al carrito </button>
+                </div>
+              </div>
+            </div>
+          </div>
+    </section>
+
     <footer>
 
     </footer>
@@ -42,6 +76,6 @@
 
     <!-- <script src="japiyoutube.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="js/llenadoTienda.js"></script>
+    <script src="js/controlador.js" type="module"></script>
 </body>
 </html>
