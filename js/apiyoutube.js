@@ -8,50 +8,65 @@ var indice =0
 
 document.addEventListener('DOMContentLoaded',function() {
   
-    // var indice = 0
-    
+    aumentarindice()
+})
        
         function aumentarindice(){
             fetch(url)
-            .then(data =>data.json())
-            .then(data=>{
-               
+            .then(producto =>producto.json())
+            .then(producto=>{
                 
-            
-             document.getElementById('videoi').src="https://www.youtube.com/embed/"+data.items[indice].snippet.resourceId.videoId
-             document.getElementById('titulov').textContent=data.items[indice].snippet.title
-             document.getElementById('descripv').textContent=data.items[indice].snippet.description
-            
-            if (indice <data.items.length) {
-                indice++
+                let cards = document.getElementById("cards")
                 
-            } 
-            else { indice = 0
-                
-            }
+                producto.items.forEach(function (producto) {
+                    // console.log(producto.nombre)
+                     // reseta para pintar con js 
+    
+                     //1. comience a crear la estructura que necesite
+                     // creo la columna
+                     let columna = document.createElement("div")
+                     columna.classList.add("col")
+                     // creo la tarjeta 
+                     let tarjeta = document.createElement("div")
+                     tarjeta.classList.add("card")
+                     tarjeta.classList.add("h-100")
+    
+                    let foto = document.createElement("iframe")
+                    foto.classList.add("card-img-top")
+                    foto.src="https://www.youtube.com/embed/"+producto.snippet.resourceId.videoId
+                    let cuerpotarjeta = document.createElement("div")
+                    cuerpotarjeta.classList.add("card-body")
                     
-                    console.log(indice)
+                    let titulo = document.createElement("h5")
+                    titulo.classList.add("card-title")
+                    titulo.textContent= producto.snippet.title
+
+    
+                    let descripcard = document.createElement("p")
+                    descripcard.classList.add("card-text","alturadescrip")
+                    descripcard.textContent = producto.descripcion
+                   // Creando un boton 
+                //    let boton = document.createElement("button")
+                //    boton.classList.add("btn","btn-warning","mx-4","mb-4")
+                //    boton.textContent="Ver"
+    
+                   // boton.setAttribute("data-bs-toggle","modal")
+                   // boton.setAttribute("data-bs-target","#exampleModal")
+    
+                //    boton.setAttribute("type","button")       
+                    //2. ordenar la estructura padres e hijo 
+                      
+                       tarjeta.appendChild(foto)
+                       columna.appendChild(tarjeta)
+                       cards.appendChild(columna)                
+                       tarjeta.appendChild(cuerpotarjeta)                
+                       cuerpotarjeta.appendChild(titulo)
+                       cuerpotarjeta.appendChild(descripcard)
+                    //    cuerpotarjeta.appendChild(boton)
+                 });
+    
                 })
-                   
-            }
-            setInterval(aumentarindice,5000)  
-        //  function pintarcards() {
-        //     fetch(url)
-        //     .then(data =>data.json())
-        //     .then(data=>{ 
-        //     data.items.forEach(video => {
-        //         templateCard.querySelector('iframe').src="https://www.youtube.com/embed/"+video.snippet.resourceId.videoId
-        //         templateCard.querySelector('h5').textContent=video.snippet.title
-        //         templateCard.querySelector('p').textContent =video.snippet.description
-        //         const clone = templateCard.cloneNode(true)
-        //         fragment.appendChild(clone)
-        //     });
-        //         cards.appendChild(fragment)
-        //     })
-             
-        //  }  
-        //  pintarcards()
-            
-})
+        }
 
 
+        

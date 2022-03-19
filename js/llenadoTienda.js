@@ -1,94 +1,21 @@
-// crear un arreglo de objetos 
-// let productos=[
-//     {
-//         nombre:"pentagrama",
-//         precio:450000,
-//         foto:"",
-//         descripcion:""
-//     },
-// ]
-
-// document.addEventListener('DOMContentLoaded', () =>{
-//     fetchData()
-//     sliderlibros()
-
-// })
 
 var indice = 0
 
-//      function sliderlibros(data) {
-       
-   
-      
-//    //     console.log(data.libros[indice].pdf)
-        
-//         data.libros.forEach(  function(libro){
 
-//             document.getElementById('imglib').src= libro.imagen
-//             document.getElementById('imglib').srcset= libro.srcset
-//             document.getElementById('pdfi').href=libro.pdf
-//             document.getElementById('nomlib').textContent=libro.nombre
-//            //  console.log(libro)
-            
-//         } );
-//        }
-
-         
-
-           // document.getElementById('pdfi').href= data.libros[indice].pdf
-             
-           //   document.getElementById('nomlib').textContent=data.libros[indice].nombre
-            // document.getElementById('descriplib').textContent=data[indice].descrip
     export function pintarTienda (){       
           
-           let libros=[
-                {  nombre:"Sicología Revolucionaria",
-              pdf:"https://drive.google.com/file/d/1czovYzJht6F47T9C5Q1u7ULTYbdMSWNM/view?usp=sharing",
-               imagen:"https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_65.jpg?time=1644679434",
-               srcset: "https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_65.jpg , https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_65-183x300.jpg ",
-               descripcion:"acjn ñacrenvnañlefrvnalfnvñasfl"
-              },
-                 {  nombre:"Para los Pocos",
-                  pdf:"https://drive.google.com/file/d/1q5lALhqKQNuJAca-MhPgGegQ8jiVvul8/view?usp=sharing",
-                  imagen:"https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_68.jpg?time=1644679434",
-                  srcset: "https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_68.jpg , https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_68-183x300.jpg  ",
-                  descripcion:"acjn ñacrenvnañlefrvnalfnvñasfl"
-                 }, 
-                 {  nombre:"Sicología Revolucionaria",
-                 pdf:"https://drive.google.com/file/d/1czovYzJht6F47T9C5Q1u7ULTYbdMSWNM/view?usp=sharing",
-                  imagen:"https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_65.jpg?time=1644679434",
-                  srcset: "https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_65.jpg , https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_65-183x300.jpg ",
-                  descripcion:"acjn ñacrenvnañlefrvnalfnvñasfl"
-                 },
-                    {  nombre:"Para los Pocos",
-                     pdf:"https://drive.google.com/file/d/1q5lALhqKQNuJAca-MhPgGegQ8jiVvul8/view?usp=sharing",
-                     imagen:"https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_68.jpg?time=1644679434",
-                     srcset: "https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_68.jpg , https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_68-183x300.jpg  ",
-                     descripcion:"acjn ñacrenvnañlefrvnalfnvñasfl"
-                    },
-                    {  nombre:"Sicología Revolucionaria",
-                    pdf:"https://drive.google.com/file/d/1czovYzJht6F47T9C5Q1u7ULTYbdMSWNM/view?usp=sharing",
-                     imagen:"https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_65.jpg?time=1644679434",
-                     srcset: "https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_65.jpg , https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_65-183x300.jpg ",
-                     descripcion:"acjn ñacrenvnañlefrvnalfnvñasfl"
-                    },
-                       {  nombre:"Para los Pocos",
-                        pdf:"https://drive.google.com/file/d/1q5lALhqKQNuJAca-MhPgGegQ8jiVvul8/view?usp=sharing",
-                        imagen:"https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_68.jpg?time=1644679434",
-                        srcset: "https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_68.jpg , https://secureservercdn.net/198.71.233.231/h8n.b10.myftpupload.com/wp-content/uploads/2020/04/aprende_gnosis_68-183x300.jpg  ",
-                        descripcion:"acjn ñacrenvnañlefrvnalfnvñasfl"
-                       }
-
-             ]
              //SE USA TRAVERSING PARA CREAR ETIQUETAS HTML DESDE JS 
              // creo la referencia al componente padre
              // creo una variable para almacenar la base
              //sobre las cual voy a pintar 
+             fetch("json/libros.json")
+            .then(  producto =>producto.json()) 
+            .then(producto=>{
+
              let cards = document.getElementById("cards")
-             let titulo = document.getElementById("titulo")
-             console.log(cards)
+            //  console.log(cards)
              
-             libros.forEach(function (producto) {
+             producto.libros.forEach(function (producto) {
                 // console.log(producto.nombre)
                  // reseta para pintar con js 
 
@@ -116,23 +43,17 @@ var indice = 0
                 precio.textContent= "$500000"
 
                 let descripcard = document.createElement("p")
-                descripcard.classList.add("card-text")
+                descripcard.classList.add("card-text","alturadescrip")
                 descripcard.textContent = producto.descripcion
                // Creando un boton 
                let boton = document.createElement("button")
                boton.classList.add("btn","btn-warning","mx-4","mb-4")
-               boton.textContent="Ver producto"
+               boton.textContent="Ver"
 
                // boton.setAttribute("data-bs-toggle","modal")
                // boton.setAttribute("data-bs-target","#exampleModal")
 
-               boton.setAttribute("type","button")
-
-
-
-
-                
-
+               boton.setAttribute("type","button")       
                 //2. ordenar la estructura padres e hijo 
                   
                    tarjeta.appendChild(foto)
@@ -143,14 +64,14 @@ var indice = 0
                    cuerpotarjeta.appendChild(precio)
                    cuerpotarjeta.appendChild(descripcard)
                    cuerpotarjeta.appendChild(boton)
+             });
+
+            } 
+            
+            )     
+         }
                
-
-             
-
-
-
-             });      
-            }       
+            
        
                
 
@@ -177,4 +98,4 @@ var indice = 0
 
    // function cambiarFoto(){
    //     console.log("oe hiciste clic")
-   // }
+   // 

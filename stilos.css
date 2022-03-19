@@ -2,18 +2,33 @@
     background-image: url("img/FOTO3.jpg");
     background-attachment: fixed;
     background-size: cover;
-    /* height: 450px; */
+     height: 450px; 
 }
 #redes{
     padding-left: 1%;
     padding-right: 1%;
 }
- li {
+ a {
     text-decoration: none;
     
 }
+/* .alturadescrip{
+    max-height: 100px;
 
+} */
 footer{
     background-color: darkgray;
 }
-
+#mainlibros{
+    margin-top: 6em;
+}
+.altocard{
+    height: 15em;
+}
+.secontenido{
+    margin: 3em ;
+    
+}
+.caja{
+    margin-left: 2em;
+}
