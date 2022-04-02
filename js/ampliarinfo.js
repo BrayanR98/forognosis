@@ -20,6 +20,7 @@ export function ampliarInformacion (event){
         precio.textContent=producto.precio
         let descripcion = document.getElementById("descripinfo")
         descripcion.textContent = producto.descripcion
+        
     }
 }
 
