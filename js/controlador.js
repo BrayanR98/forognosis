@@ -44,6 +44,7 @@ contendorTienda.addEventListener("click",function(event){
         // console.log("Estoy haciendo clic en el boton")
         let modalinfoproducto = new bootstrap.Modal(document.getElementById('modalinfoproducto'))
        producto=ampliarInformacion(event)
+       console.log(producto)
         modalinfoproducto.show()
     }
    
@@ -55,24 +56,27 @@ let boton = document.getElementById("botonAdd")
 boton.addEventListener('click',function(evento){
      
 
+
      //1 capturar la cantidad del producto
      let cantidad = document.getElementById("cantidadProducto").value
-      console.log(cantidad)
-
-     //2 Agrego la cantidad al objeto producto
+     
+     
+     
+      //2 Agrego la cantidad al objeto producto
       producto.cantidad=cantidad
-
-     //3 Agregar el producto al carrito
-
-     carrito.push(producto)
      
-     //4 Calculo la sumatoria de cantidades
-     let suma =0
+
+     // //3 Agregar el producto al carrito
+
+      carrito.push(producto)
      
-     carrito.forEach(function(producto){
-          suma = suma+Number(producto.cantidad)
-         pintarCarrito(suma) 
-     })
+     // //4 Calculo la sumatoria de cantidades
+      let suma =0
+     
+      carrito.forEach(function(producto){
+           suma = suma+Number(producto.cantidad)
+          pintarCarrito(suma) 
+      })
 
     
      
@@ -86,6 +90,8 @@ boton.addEventListener('click',function(evento){
          numeros.textContent = 0
          numeros.classList.add("invisible")
     })
+    //calcular total 
+    
 
     //4.ver resumen de venta 
     let botoncarrito = document.getElementById("botoncarrito")
@@ -113,8 +119,33 @@ boton.addEventListener('click',function(evento){
                foto.classList.add("img-fluid","w-100")
                foto.src=producto.foto
                
+               let nomproducto = document.createElement("h2")
+               nomproducto.textContent=producto.nombre 
+
+               let descripcion = document.createElement("p")
+               descripcion.textContent=producto.descripcion 
+
+               let precio = document.createElement("h2")
+               precio.textContent=producto.precio 
+
+               let cantidad = document.createElement("h3")
+               cantidad.textContent=producto.cantidad
+               let cant= producto.cantidad
+               let pre= producto.precio
+               let subtotal = document.createElement("h2")
+               subtotal.textContent = cant*pre
+               let total = subtotal
+               producto.total=total
+               let suma = 0
+               suma = suma+Number(producto.total)
+               
                //padres e hijos
                columna1.appendChild(foto)
+               columna2.appendChild(nomproducto)
+               columna2.appendChild(descripcion)
+               columna2.appendChild(precio)
+               columna2.appendChild(cantidad)
+               columna2.appendChild(subtotal)
 
                fila.appendChild(columna1)
                fila.appendChild(columna2)

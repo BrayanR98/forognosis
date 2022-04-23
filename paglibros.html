@@ -76,7 +76,7 @@
                             <p  class="text-center" id="descripinfo"></p>
                             <div class="mb-3">
                               <label for="exampleInputPassword1" class="form-label">cantidad</label>
-                              <input type="number" class="form-control" id="cantidadProducto" value="1">
+                              <input type="number" class="form-control" id="cantidadProducto" min="1" value="1">
                             </div>
                           </div>
                     </div>
@@ -102,6 +102,8 @@
             <div class="modal-body">
               <div class="container" id="contenedorventa">
 
+                <label for="total">TOTAL</label>
+                <input type="number" min="0" value="0" id="total">
               </div>
             </div>
             <div class="modal-footer">

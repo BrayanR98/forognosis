@@ -40,7 +40,7 @@ var indice = 0
 
                 let precio = document.createElement("h4")
                 precio.classList.add("card-text")
-                precio.textContent= "$500000"
+                precio.textContent=500000
 
                 let descripcard = document.createElement("p")
                 descripcard.classList.add("card-text","alturadescrip")
