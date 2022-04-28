@@ -32,6 +32,8 @@ import { pintarTienda } from "./llenadoTienda.js";
 import{ampliarInformacion} from "./ampliarinfo.js"
 import {pintarCarrito} from "./pintarCarrito.js"
 
+let modalinfoproducto = new bootstrap.Modal(document.getElementById('modalinfoproducto'))
+
 let producto={}
 // Llamando modulo de pintar 
 pintarTienda()
@@ -42,9 +44,9 @@ let contendorTienda = document.getElementById("cards")
 contendorTienda.addEventListener("click",function(event){
     if(event.target.classList.contains("btn")){
         // console.log("Estoy haciendo clic en el boton")
-        let modalinfoproducto = new bootstrap.Modal(document.getElementById('modalinfoproducto'))
+  //      let modalinfoproducto = new bootstrap.Modal(document.getElementById('modalinfoproducto'))
        producto=ampliarInformacion(event)
-       console.log(producto)
+       let cantidad = document.getElementById("cantidadProducto").value=1;
         modalinfoproducto.show()
     }
    
@@ -77,81 +79,153 @@ boton.addEventListener('click',function(evento){
            suma = suma+Number(producto.cantidad)
           pintarCarrito(suma) 
       })
-
-    
+     //  let modalinfoproducto = new bootstrap.Modal(document.getElementById('modalinfoproducto'))
+      modalinfoproducto.hide()
      
      
     })
-
-    let botonRemove = document.getElementById("limpiar")
+    //traemos los elementos que muestran los totales
+    let cajatotal = document.getElementById("totalt")
+    let usd = document.getElementById('usd'); 
+    //declramos el modal del carrito 
+    let modalventa = new bootstrap.Modal(document.getElementById('resumenCarrito'))
+    //elemento boton de compra 
+    let btncompra= document.getElementById('btncompra');
+    //botones para vaciar el carrito
+    let botonRemove = document.getElementById("limpiar");
     botonRemove.addEventListener("click",function(evento){
-         carrito=[]
+         
          let numeros = document.getElementById("capsula")
          numeros.textContent = 0
          numeros.classList.add("invisible")
+         modalinfoproducto.hide()
+         modalventa.hide()
+         carrito=[]
+         btncompra.classList.add('invisible');
+         botonRemove.classList.add('invisible');
+         cajatotal.textContent="";
+         usd.textContent="";
+
     })
     //calcular total 
-    
+    let tusd = 0;
 
     //4.ver resumen de venta 
     let botoncarrito = document.getElementById("botoncarrito")
     botoncarrito.addEventListener("click",function (event) {
+     
+     let contenedor =document.getElementById("contenedorventa")
+     
+     contenedor.innerHTML=""
+          if (carrito.length>0) {
+               btncompra.classList.remove('invisible');
+               botonRemove.classList.remove('invisible');
 
-          let contenedor =document.getElementById("contenedorventa")
-
-          let modalventa = new bootstrap.Modal(document.getElementById('resumenCarrito'))
-          // borrar contenido html de una seccion 
-          contenedor.innerHTML=""
-          //recorrer el carrito para pintar los productos en la factura
-          carrito.forEach(function(producto){
+               // borrar contenido html de una seccion 
                
-               // traversing
+               let total = 0
+               //recorrer el carrito para pintar los productos en la factura
+               carrito.forEach(function(producto){
+                    
+                    // traversing
+                    let fila = document.createElement("div")
+                    fila.classList.add("row")
+     
+                    let columna1 = document.createElement("div")
+                    columna1.classList.add("col-12","col-md-4")
+     
+                    let columna2 = document.createElement("div")
+                    columna2.classList.add("col-12","col-md-8")
+     
+                    let foto= document.createElement("img")
+                    foto.classList.add("img-fluid","w-100")
+                    foto.src=producto.foto
+                    
+                    let nomproducto = document.createElement("h2")
+                    nomproducto.textContent=producto.nombre 
+     
+                    let descripcion = document.createElement("p")
+                    descripcion.textContent=producto.descripcion 
+     
+                    let precio = document.createElement("h3")
+                    precio.textContent=producto.precio 
+     
+                    let cantidad = document.createElement("h5")
+                    cantidad.textContent=producto.cantidad
+                    let cant= producto.cantidad
+                    let pre= producto.precio
+                    
+                    let subtotal = document.createElement("h5")
+                    subtotal.textContent = cant*pre  
+                    
+                    total= total + cant*pre 
+     
+                    
+                 //   producto.total=total
+                    // let cajatotal = document.getElementById("total")
+                    // cajatotal.textContent=total
+                   
+                    // suma = suma+Number(producto.total)
+                    
+                    //padres e hijos
+                    columna1.appendChild(foto)
+                    columna2.appendChild(nomproducto)
+                    columna2.appendChild(descripcion)
+                    columna2.appendChild(precio)
+                    columna2.appendChild(cantidad)
+                    columna2.appendChild(subtotal)
+     
+                    fila.appendChild(columna1)
+                    fila.appendChild(columna2)
+                   
+     
+                    contenedor.appendChild(fila)
+                    
+     
+               })
+               
+                  
+                 cajatotal.textContent="Valor en COP $:"+ total
+                // let vusd= calcularusd(total)
+                calcularusd(total); 
+          }else{
+               
                let fila = document.createElement("div")
                fila.classList.add("row")
 
-               let columna1 = document.createElement("div")
-               columna1.classList.add("col-12","col-md-4")
-
-               let columna2 = document.createElement("div")
-               columna2.classList.add("col-12","col-md-8")
-
                let foto= document.createElement("img")
-               foto.classList.add("img-fluid","w-100")
-               foto.src=producto.foto
+                    foto.classList.add("img-fluid","w-100")
+                    foto.src="img/carritovacio.jfif";
+                    
+               if (cajatotal.textContent=="") {
+                    fila.appendChild(foto)
+                    contenedor.appendChild(fila)
+                    cajatotal.textContent="El carrito esta vacio..."
+               }
+              
                
-               let nomproducto = document.createElement("h2")
-               nomproducto.textContent=producto.nombre 
+                 
 
-               let descripcion = document.createElement("p")
-               descripcion.textContent=producto.descripcion 
-
-               let precio = document.createElement("h2")
-               precio.textContent=producto.precio 
-
-               let cantidad = document.createElement("h3")
-               cantidad.textContent=producto.cantidad
-               let cant= producto.cantidad
-               let pre= producto.precio
-               let subtotal = document.createElement("h2")
-               subtotal.textContent = cant*pre
-               let total = subtotal
-               producto.total=total
-               let suma = 0
-               suma = suma+Number(producto.total)
-               
-               //padres e hijos
-               columna1.appendChild(foto)
-               columna2.appendChild(nomproducto)
-               columna2.appendChild(descripcion)
-               columna2.appendChild(precio)
-               columna2.appendChild(cantidad)
-               columna2.appendChild(subtotal)
-
-               fila.appendChild(columna1)
-               fila.appendChild(columna2)
-
-               contenedor.appendChild(fila)
-
-          })
+          }
+          
+           
+          
+          //console.log(carrito)15
           modalventa.show()
     })
+    
+    function calcularusd (total) {
+     
+
+     fetch('https://api.exchangerate-api.com/v4/latest/COP')
+     .then(res => res.json())
+     .then(data => {
+           const taza = data.rates['USD'];
+           tusd = (total * taza).toFixed(2);
+          usd.textContent= 'Valor en USD $: '+tusd; 
+          
+     })
+
+      
+}
+

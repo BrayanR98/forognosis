@@ -84,7 +84,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button id="limpiar" type="button" class="btn btn-warning">Limpiar carrito </button>
+                  
                   <button id="botonAdd" type="button" class="btn btn-primary">Añadir al carrito</button>
                 </div>
               </div>
@@ -102,13 +102,16 @@
             <div class="modal-body">
               <div class="container" id="contenedorventa">
 
-                <label for="total">TOTAL</label>
-                <input type="number" min="0" value="0" id="total">
+                
+                <!-- <input type="number" min="0" value="0" id="total"> -->
               </div>
+              <h2  id="totalt"></h2>
+              <h2  id="usd"></h2>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer" id="mvcarrito">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              <button type="button" class="btn btn-primary">Comprar</button>
+              <button id="limpiar" type="button" class="btn btn-warning invisible">Limpiar carrito </button>
+              <button type="button" class="btn btn-primary invisible" id="btncompra">Comprar</button>
             </div>
           </div>
         </div>
