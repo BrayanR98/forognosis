@@ -33,7 +33,7 @@ import{ampliarInformacion} from "./ampliarinfo.js"
 import {pintarCarrito} from "./pintarCarrito.js"
 
 let modalinfoproducto = new bootstrap.Modal(document.getElementById('modalinfoproducto'))
-
+let modalincompra = new bootstrap.Modal(document.getElementById('modalincompra'))
 let producto={}
 // Llamando modulo de pintar 
 pintarTienda()
@@ -93,6 +93,10 @@ boton.addEventListener('click',function(evento){
     let btncompra= document.getElementById('btncompra');
     //botones para vaciar el carrito
     let botonRemove = document.getElementById("limpiar");
+    //elemento boton conversor
+    let btnusd= document.getElementById('btnusd');
+    //contador capsula carrito
+    let numeros = document.getElementById("capsula")
     botonRemove.addEventListener("click",function(evento){
          
          let numeros = document.getElementById("capsula")
@@ -101,14 +105,17 @@ boton.addEventListener('click',function(evento){
          modalinfoproducto.hide()
          modalventa.hide()
          carrito=[]
+         total = 0
          btncompra.classList.add('invisible');
          botonRemove.classList.add('invisible');
+         btnusd.classList.add('invisible');
          cajatotal.textContent="";
          usd.textContent="";
 
     })
     //calcular total 
     let tusd = 0;
+    let total = 0;
 
     //4.ver resumen de venta 
     let botoncarrito = document.getElementById("botoncarrito")
@@ -120,10 +127,11 @@ boton.addEventListener('click',function(evento){
           if (carrito.length>0) {
                btncompra.classList.remove('invisible');
                botonRemove.classList.remove('invisible');
+               btnusd.classList.remove('invisible');
 
                // borrar contenido html de una seccion 
                
-               let total = 0
+               
                //recorrer el carrito para pintar los productos en la factura
                carrito.forEach(function(producto){
                     
@@ -148,7 +156,7 @@ boton.addEventListener('click',function(evento){
                     descripcion.textContent=producto.descripcion 
      
                     let precio = document.createElement("h3")
-                    precio.textContent=producto.precio 
+                    precio.textContent= "$"+producto.precio 
      
                     let cantidad = document.createElement("h5")
                     cantidad.textContent=producto.cantidad
@@ -156,7 +164,7 @@ boton.addEventListener('click',function(evento){
                     let pre= producto.precio
                     
                     let subtotal = document.createElement("h5")
-                    subtotal.textContent = cant*pre  
+                    subtotal.textContent ="$"+cant*pre  
                     
                     total= total + cant*pre 
      
@@ -187,14 +195,14 @@ boton.addEventListener('click',function(evento){
                   
                  cajatotal.textContent="Valor en COP $:"+ total
                 // let vusd= calcularusd(total)
-                calcularusd(total); 
+            //    calcularusd(total); 
           }else{
                
                let fila = document.createElement("div")
                fila.classList.add("row")
 
                let foto= document.createElement("img")
-                    foto.classList.add("img-fluid","w-100")
+                    foto.classList.add("img-fluid","w-100","pimg")
                     foto.src="img/carritovacio.jfif";
                     
                if (cajatotal.textContent=="") {
@@ -206,17 +214,14 @@ boton.addEventListener('click',function(evento){
                
                  
 
-          }
-          
-           
-          
+          }         
           //console.log(carrito)15
           modalventa.show()
     })
     
-    function calcularusd (total) {
-     
 
+btnusd.addEventListener('click',function calcularusd() {
+     console.log(total)
      fetch('https://api.exchangerate-api.com/v4/latest/COP')
      .then(res => res.json())
      .then(data => {
@@ -225,7 +230,22 @@ boton.addEventListener('click',function(evento){
           usd.textContent= 'Valor en USD $: '+tusd; 
           
      })
+})
+let avisov = document.getElementById('avisov');
 
-      
-}
-
+btncompra.addEventListener('click',function () {
+     let numeros = document.getElementById("capsula");
+     numeros.textContent = 0;
+     numeros.classList.add("invisible");
+     avisov.textContent="¡EXITO EN LA VENTA!";
+     modalventa.hide();
+     carrito=[];
+     total = 0;
+     btncompra.classList.add('invisible');
+     botonRemove.classList.add('invisible');
+     btnusd.classList.add('invisible');
+     cajatotal.textContent="";
+     usd.textContent="";
+     modalincompra.show()
+     setTimeout(()=>{modalincompra.hide()}, 2000);
+})

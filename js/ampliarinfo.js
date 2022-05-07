@@ -17,7 +17,7 @@ export function ampliarInformacion (event){
         let nombre = document.getElementById("nombreinfo")
         nombre.textContent=producto.nombre
         let precio = document.getElementById("precioinfo")
-        precio.textContent=producto.precio
+        precio.textContent="$"+producto.precio
         let descripcion = document.getElementById("descripinfo")
         descripcion.textContent = producto.descripcion
         

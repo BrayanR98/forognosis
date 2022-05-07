@@ -35,7 +35,7 @@
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" id ="botoncarrito" aria-current="page" href="#">
-                  <i class="bi bi-cart4 icono"></i>
+                  <i class="bi bi-cart4 icono"> </i>
                   <span id="capsula" class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-danger invisible">
                     99+
                   </span>
@@ -106,16 +106,36 @@
                 <!-- <input type="number" min="0" value="0" id="total"> -->
               </div>
               <h2  id="totalt"></h2>
-              <h2  id="usd"></h2>
+              <h2  id="usd" class=""></h2>
             </div>
             <div class="modal-footer" id="mvcarrito">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
               <button id="limpiar" type="button" class="btn btn-warning invisible">Limpiar carrito </button>
               <button type="button" class="btn btn-primary invisible" id="btncompra">Comprar</button>
+              <button type="button" class="btn btn-primary invisible" id="btnusd">Convertir a Dolar</button>
             </div>
           </div>
         </div>
       </div>
+    </section>
+    <section><!-- Modal validacion registro-->
+      <!-- Modal -->
+         <div class="modal fade" id="modalincompra" tabindex="-1" >
+           <div class="modal-dialog">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <h5 class="modal-title" id="exampleModalLabel">COMPRA EXITOSA!</h5>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                 <p id="avisov"></p>
+               </div>
+               <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">cerrar</button>
+               </div>
+             </div>
+           </div>
+         </div>
     </section>
     <footer class=" animate__animated animate__fadeInTopLeft ">
       <div class="row">

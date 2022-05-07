@@ -2,11 +2,13 @@ import { getAuth,signInWithEmailAndPassword } from "https://www.gstatic.com/fire
 
 const botonl = document.getElementById("botonl");
 let bienvenidauser = document.getElementById("bienvenidauser");
+let libienvenidauser = document.getElementById("libienvenidauser");
+let btnr= document.getElementById("btnr");
 const auth = getAuth();
 
-botonl.addEventListener("click",function () {
+botonl.addEventListener("click",function (e) {
+   e.preventDefault();
     
-
     let lcorreo = document.getElementById("lcorreo").value;
     let lpasswd = document.getElementById("lpasswd").value;
     const formulariolog = document.getElementById("login-user");
@@ -17,18 +19,9 @@ botonl.addEventListener("click",function () {
         // Signed in
         
         let textoinformativo = document.getElementById("informaciongeneral")
-        
-
-        bienvenidauser.innerHTML =`
-        
-          <a class="nav-link dropdown-toggle ml-auto" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <h4 id="bienvenidauser" class="nav-link ml-auto ">
-                Bienvenido : ${lcorreo}
-            </h4>
-          </a>          
-          <ul class="dropdown-menu ml-auto" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item " id="cerrarsesion" href="#">CERRAR SESION</a></li>            
-          </ul>`
+        btnr.classList.add("invisible")
+        libienvenidauser.classList.remove("invisible")
+        bienvenidauser.innerHTML =`Bienvenido : ${lcorreo} <i class="bi bi-person-circle"></i> `
         formulariolog.reset()
         textoinformativo.textContent= "Exito logueandote"
         modalinformativo.show()
@@ -50,10 +43,16 @@ botonl.addEventListener("click",function () {
 })
 
 const cerrarsesion = document.getElementById("cerrarsesion");
-cerrarsesion.addEventListener("click", e => {
-  // e.preventDefault();
-  // auth.signOut().then(()=>{
-    console.log('salio');
-  
+ cerrarsesion.addEventListener("click", e => {
+    e.preventDefault();
+     auth.signOut().then(()=>{
+
+      btnr.classList.remove("invisible")
+      bienvenidauser.innerHTML ="";
+      libienvenidauser.classList.add("invisible")
+
+     })
+     console.log('salio');
+     
  
-})
+ })

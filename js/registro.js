@@ -14,7 +14,8 @@ createUserWithEmailAndPassword(auth, correo, password)
   .then((userCredential) => {
     // Signed in
     const user = userCredential.user;
-    console.log(user)
+    
+    console.log(user.email)
     let textoinformativo = document.getElementById("informaciongeneral")
     
     formulario.reset()
